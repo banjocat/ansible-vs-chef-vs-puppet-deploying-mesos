@@ -32,9 +32,9 @@
       line: "{{ansible_default_ipv4.address}} {{ansible_hostname}}"
 
 - name: Add mesos list
-    copy:
-        path: /etc/apt/sources.list.d/mesosphere.list
-        content: deb http://repos.mesosphere.com/ubuntu trusty main
+  copy:
+      dest: /etc/apt/sources.list.d/mesosphere.list
+      content: deb http://repos.mesosphere.com/ubuntu trusty main
 
 - name: Install mesos
   apt:
