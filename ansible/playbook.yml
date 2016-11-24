@@ -11,5 +11,9 @@
 
 - hosts: mesos-followers
   user: root
+  vars:
+      # Where attached volume is on host
+      - volume_path: /media/volume
   roles:
       - follower
+      - mesos-dns

@@ -5,7 +5,7 @@
 
 - name: Make mesos volume path
   file:
-      path: /media/volume/mesos
+      path: "{{volume_path}}/mesos"
       state: directory
   notify: restart slave
 
