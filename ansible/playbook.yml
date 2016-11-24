@@ -1,0 +1,12 @@
+---
+- hosts: mesos-master
+  user: root
+  roles:
+      - common
+      - master
+
+- hosts: mesos-followers
+  user: root
+  roles:
+      - common
+      - follower

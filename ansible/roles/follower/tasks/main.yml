@@ -1,0 +1,31 @@
+---
+
+- name: Stop zookeeper
+  service: name=zookeeper state=stopped
+
+- name: Make mesos volume path
+  file:
+      path: /media/volume/mesos
+      state: directory
+  notify: restart slave
+
+- name: Change workdir to volume
+  copy:
+      dest: /etc/mesos/work_dir
+      content: /media/volume/mesos
+  notify: restart slave
+
+- name: Add zk
+  copy:
+      dest: /etc/mesos/zk
+      content: "zk://{{ groups['mesos-master']|join(':2181,') }}:2181/mesos"
+  notify: restart slave
+
+- name: Add ip
+  copy:
+      dest: /etc/mesos-slave/ip
+      content: "{{ansible_default_ipv4.address}}"
+  notify: restart slave
+
+
+

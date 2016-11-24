@@ -1,0 +1,7 @@
+---
+
+- name: restart master
+  service: name=mesos-master state=restarted
+
+- name: restart marathon
+  service: name=marathon state=restarted

@@ -1,0 +1,25 @@
+---
+
+- name: Install zookeeper
+  apt: name=zookeeper
+  notify: restart master
+
+- name: Start zookeeper
+  service: name=zookeeper state=started
+  notify: restart master
+
+- name: Add ip
+  copy:
+      dest: /etc/mesos-master/ip
+      content: "{{ansible_default_ipv4.address}}"
+  notify: restart master
+
+- name: Install marathon
+  apt:
+      name: marathon=1.1.4-1.0.514.ubuntu1404
+  notify: restart marathon
+  tags:
+      - marathon
+
+
+
