@@ -11,7 +11,7 @@
 
 - name: Change workdir to volume
   copy:
-      dest: /etc/mesos/work_dir
+      dest: /etc/mesos-slave/work_dir
       content: /media/volume/mesos
   notify: restart slave
 
@@ -19,6 +19,13 @@
   copy:
       dest: /etc/mesos/zk
       content: "zk://{{ groups['mesos-master']|join(':2181,') }}:2181/mesos"
+  notify: restart slave
+
+# Needs to be done unless you have DNS
+- name: Set hostname to ip
+  copy:
+      dest: /etc/mesos-slave/hostname
+      content: "{{ansible_default_ipv4.address}}"
   notify: restart slave
 
 - name: Add ip

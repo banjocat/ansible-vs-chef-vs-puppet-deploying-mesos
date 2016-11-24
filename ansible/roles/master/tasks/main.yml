@@ -14,6 +14,13 @@
       content: "{{ansible_default_ipv4.address}}"
   notify: restart master
 
+# Needs to be done unless you have DNS
+- name: Set hostname to ip
+  copy:
+      dest: /etc/mesos-master/hostname
+      content: "{{ansible_default_ipv4.address}}"
+  notify: restart master
+
 - name: Install marathon
   apt:
       name: marathon=1.1.4-1.0.514.ubuntu1404
