@@ -1,0 +1,27 @@
+---
+
+- name: Create install directory
+  file: path=/usr/local/mesos-dns state=directory recurse=true
+
+- name: Get mesos-dns
+  get_url:
+      url: https://github.com/mesosphere/mesos-dns/releases/download/v0.6.0/mesos-dns-v0.6.0-linux-amd64
+      dest: /usr/local/mesos-dns/mesos-dns
+
+- name: Create config.json
+  copy:
+      dest: /usr/local/mesos-dns/config.json
+      content: |
+          {
+              "zk": "zk://{{groups['mesos-master']|join(':2181,')}}:2181/mesos",
+              "refreshSeconds": 60,
+              "ttl": 60,
+              "domain": "mesos",
+              "port": 53,
+              "resolvers": ["169.254.169.254","10.0.0.1"],
+              "timeout": 5,
+              "email": "root.mesos-dns.mesos"
+          }
+
+
+
