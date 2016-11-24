@@ -21,6 +21,18 @@
       content: "zk://{{ groups['mesos-master']|join(':2181,') }}:2181/mesos"
   notify: restart slave
 
+- name: Add docker container options
+  copy:
+      dest: /etc/mesos-slave/containerizers
+      content: "docker,mesos"
+  notify: restart slave
+
+- name: Add isolation
+  copy:
+      dest: /etc/mesos-slave/isolation
+      content: "cgroups/cpu,cgroups/mem"
+  notify: restart slave
+
 # Needs to be done unless you have DNS
 - name: Set hostname to ip
   copy:

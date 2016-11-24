@@ -24,6 +24,9 @@
       - maven 
       - libapr1-dev
       - libsvn-dev
+      - cgroup-bin
+      - cgroup-lite
+      - libcgroup1
 
 - name: Confirm hostname exists
   lineinfile:
@@ -51,4 +54,28 @@
       update_cache: yes
   tags:
       - mesos_install
+
+- name: Add apt-key for docker
+  apt_key:
+      keyserver: hkp://ha.pool.sks-keyservers.net:80
+      id: 58118E89F3A912897C070ADBF76221572C52609D
+  tags:
+      - docker
+
+- name: Add docker list
+  copy:
+      dest: /etc/apt/sources.list.d/docker.list
+      content: deb https://apt.dockerproject.org/repo ubuntu-trusty main
+  tags:
+      - docker
+
+- name: Install docker
+  apt: name=docker-engine update_cache=yes
+  tags:
+      - docker
+
+- name: Start docker
+  service: name=docker state=started
+  tags:
+      - docker
 
