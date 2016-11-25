@@ -3,9 +3,10 @@ class mesos_common {
 
     apt::ppa { 'ppa:openjdk-r/ppa': }
     ->
+    Class['apt::update']
+    ->
     package {['openjdk-8-jdk', 'maven']:
         ensure  => present,
-        require => Class['apt::update']
     }
 
     $packages = [
@@ -58,9 +59,10 @@ class mesos_common {
         }
     }
     ->
+    Class['apt::update']
+    ->
     package {'docker-engine':
         ensure  => present,
-        require => Class['apt::update']
     }
     ->
     service {'docker':
