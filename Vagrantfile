@@ -19,15 +19,14 @@ Vagrant.configure("2") do |config|
     #    }
     #    #ansible.tags = ['dns']
     #end
-    #
-    #
-    #
 
-    
+
+    config.vm.synced_folder "./puppet/hiera", "/etc/hiera" 
     config.vm.provision "puppet" do |puppet|
         puppet.manifests_path = "./puppet/manifests"
         puppet.manifest_file = "init.pp"
         puppet.module_path = [ "./puppet/modules", "./puppet/third_party_modules"]
+        puppet.hiera_config_path = "./puppet/hiera/vagrant_hiera.yaml"
         puppet.facter = {
             "fqdn" => "mesos-master"
         }

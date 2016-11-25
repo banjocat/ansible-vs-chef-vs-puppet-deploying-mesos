@@ -1,0 +1,7 @@
+---
+:backends:
+    - yaml
+:yaml:
+    :datadir: "/etc/hiera/"
+:hierarchy:
+    - vagrant_common
