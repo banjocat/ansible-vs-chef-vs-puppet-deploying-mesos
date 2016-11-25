@@ -13,11 +13,11 @@ Vagrant.configure("2") do |config|
 
     config.vm.provision "ansible" do |ansible|
         ansible.sudo = true
-        ansible.playbook = "./playbook.yml"
+        ansible.playbook = "./ansible/playbook.yml"
         ansible.groups = {
             "mesos-master" => ["mesos-master"]
         }
-        ansible.tags = ['marathon']
+        #ansible.tags = ['dns']
     end
 
 end

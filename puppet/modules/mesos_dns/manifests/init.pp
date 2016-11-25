@@ -1,0 +1,2 @@
+class mesos_dns {
+}
