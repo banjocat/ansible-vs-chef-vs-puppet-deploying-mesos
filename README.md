@@ -1,4 +1,11 @@
-# Need to make this README better
+# Puppet and Ansible deploying Mesos
+The purpose of this repo is to compare puppet and ansible.
+
+### Conclusion (on going)
+Ansible is crazy easy to learn. If you have some sort of knowledge of provisioning servers I believe you can master ansible ina  few days. The same can *not* be said about puppet. If I was working in a larger group I would probably choose Ansible because I know the rest of the team will be able to pick it up real fast. But.. if I was the main devops engineer of the project. I would use puppet.
+
+### Why do I prefer Puppet
+Puppet is a lot smarter on what needs to run. To gain the same intelligence with Ansible you have to use a lot of tags. As by default Ansible will just run the entire playbook. 
 
 ### To start mesos-dns in marathon
 ```
