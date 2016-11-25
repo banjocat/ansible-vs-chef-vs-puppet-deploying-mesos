@@ -3,3 +3,4 @@ terraform
 *.retry
 inventory.ini
 .vagrant
+third_party_modules

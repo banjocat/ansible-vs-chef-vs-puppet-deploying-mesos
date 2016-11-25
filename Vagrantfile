@@ -11,13 +11,25 @@ Vagrant.configure("2") do |config|
         v.cpus = 2
     end
 
-    config.vm.provision "ansible" do |ansible|
-        ansible.sudo = true
-        ansible.playbook = "./ansible/playbook.yml"
-        ansible.groups = {
-            "mesos-master" => ["mesos-master"]
-        }
-        #ansible.tags = ['dns']
-    end
+    #config.vm.provision "ansible" do |ansible|
+    #    ansible.sudo = true
+    #    ansible.playbook = "./ansible/playbook.yml"
+    #    ansible.groups = {
+    #        "mesos-master" => ["mesos-master"]
+    #    }
+    #    #ansible.tags = ['dns']
+    #end
+    #
+    #
+    #
 
+    
+    config.vm.provision "puppet" do |puppet|
+        puppet.manifests_path = "./puppet/manifests"
+        puppet.manifest_file = "init.pp"
+        puppet.module_path = [ "./puppet/modules", "./puppet/third_party_modules"]
+        puppet.facter = {
+            "fqdn" => "mesos-master"
+        }
+    end
 end
