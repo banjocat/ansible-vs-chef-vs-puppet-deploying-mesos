@@ -10,4 +10,5 @@
 "id": "mesos-dns",
 "instances": 1,
 "constraints": [["hostname", "CLUSTER", "2.3.4.5"]]
-}```
+}
+```
