@@ -28,7 +28,7 @@ class mesos_common {
 
     file_line { 'etc hosts':
         path => '/etc/hosts',
-        line => '::$ipaddress ::$hostname'
+        line => "$::ipaddress $::hostname"
     }
 
     apt::source { 'mesossphere':
@@ -66,9 +66,6 @@ class mesos_common {
     service {'docker':
         ensure => 'running',
     }
-
-
-
 
 }
 
