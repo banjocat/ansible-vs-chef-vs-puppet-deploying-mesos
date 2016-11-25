@@ -1,4 +1,4 @@
-# Used to load third party make files
+# Used to load third party modules for Vagrant
 ARGS=--target-dir=./third_party_modules
 UP_ARGS=--modulepath=./third_party_modules
 
