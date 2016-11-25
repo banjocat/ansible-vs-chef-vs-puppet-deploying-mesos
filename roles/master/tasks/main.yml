@@ -28,5 +28,16 @@
   tags:
       - marathon
 
+- name: Confirm zookeeper is started
+  service: name=zookeeper state=started
 
+- name: Confirm marathon is started
+  service: name=marathon state=started
+  tags:
+      - marathon
+
+- name: Confirm master is started
+  service: name=mesos-master state=started
+  tags:
+      - mesos-master
 

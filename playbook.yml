@@ -6,8 +6,12 @@
 
 - hosts: mesos-master
   user: root
+  vars:
+      - volume_path: /var/lib/
   roles:
       - master
+      - follower
+      - mesos-dns
 
 - hosts: mesos-followers
   user: root

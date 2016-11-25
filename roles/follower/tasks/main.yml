@@ -1,7 +1,5 @@
 ---
 
-- name: Stop zookeeper
-  service: name=zookeeper state=stopped
 
 - name: Make mesos volume path
   file:
@@ -20,6 +18,8 @@
       dest: /etc/mesos/zk
       content: "zk://{{ groups['mesos-master']|join(':2181,') }}:2181/mesos"
   notify: restart slave
+  tags:
+      - zk
 
 - name: Add docker container options
   copy:
