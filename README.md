@@ -1,6 +1,9 @@
 # Puppet and Ansible deploying Mesos
 The purpose of this repo is to compare puppet and ansible. I used Mesos as a target. As it has a somewhat complicated deployment path. It also is here for me to learn Mesos better as a current client has started to use it.
 
+## Disclaimer
+Both ansible and mesos offer a community modules for mesos. I would probably take a look at using them for a real project.
+
 ### Conclusion (on going)
 Ansible is crazy easy to learn. If you have some sort of knowledge of provisioning servers I believe you can master ansible in a few days. The same can *not* be said about puppet. If I was working in a larger group I would probably choose Ansible because I know the rest of the team will be able to pick it up real fast. But.. if I was the main devops engineer of the project. I would use puppet.
 
