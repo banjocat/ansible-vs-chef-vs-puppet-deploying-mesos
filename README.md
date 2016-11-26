@@ -13,7 +13,7 @@ Puppet is a lot smarter on what needs to run, which makes for faster deployments
 ### You disagree with me? Or think Salt is the best.
 Then use Ansible but prepare for snail speed deploys. Regardless, Anisible does make easier to read code. Choosing something for that reason is pretty valid.
 
-Maybe you prefer Salt but as a contractor I will run into Puppet and Ansible a lot more. I'm sure Salt is great but the market share is pretty low. There are many other things I would rather put the time over learning Salt.
+Maybe you prefer Salt but as a contractor I will run into Puppet and Ansible a lot more. I'm sure Salt is great but the market share is pretty low. There are many other things I would rather put the time in over learning Salt.
 
 # On to Mesos
 
