@@ -11,7 +11,7 @@ Ansible is crazy easy to learn. If you have some sort of knowledge of provisioni
 Puppet is a lot smarter on what needs to run, which makes for faster deployments. Ansible by default runs everything. It has tags or you can use multiple playbook.yml files but they don't really have the same power as Puppet has built in.  The Puppet DSL is a lot more powerful. Of course with great power comes great responsibility. It is much easier to make a mess of Puppet than Ansible. But I have faith in my ability to make things clean(possible famous last words :D)
 
 ### You disagree with me? Or think Salt is the best.
-Then use Ansible but prepare for sail speed deploys. Regardless, Anisible does make easier to read code. Choosing something for that reason is pretty valid.
+Then use Ansible but prepare for snail speed deploys. Regardless, Anisible does make easier to read code. Choosing something for that reason is pretty valid.
 
 Maybe you prefer Salt but as a contractor I will run into Puppet and Ansible a lot more. I'm sure Salt is great but the market share is pretty low. There are many other things I would rather put the time over learning Salt.
 
