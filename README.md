@@ -2,9 +2,9 @@
 The purpose of this repo is to compare puppet and ansible. I used Mesos as a target. As it has a somewhat complicated deployment path. It also is here for me to learn Mesos better as a current client has started to use it.
 
 ## Disclaimer
-Both ansible and mesos offer community modules for mesos. I would probably take a look at using them for a real project.
+Both ansible and mesos offer community modules/roles for mesos. I would probably take a look at using them for a real project.
 
-For ansible https://github.com/frankhinek/ansible-mesos-cluster.git looks promising (yet like other mesos ansible modules doesn't seem to have much support)
+For ansible https://github.com/frankhinek/ansible-mesos-cluster.git looks promising (yet like other mesos ansible rles doesn't seem to have much support)
 
 And puppet has https://forge.puppet.com/deric/mesos
 
