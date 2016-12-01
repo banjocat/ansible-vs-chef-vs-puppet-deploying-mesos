@@ -22,10 +22,8 @@ Ansible is crazy easy to learn. If you have some sort of knowledge of provisioni
 * DevOps team has good code sense. Puppet code becomes much cleaner when following good coding guidelines. Specifically DRY, KISS and notinventedhere. A good puppet code is cleaner than Ansible.
 * The DevOps team wants to use Puppet, but I would ask questions why they want to use it. To me, being familiar with Puppet is not alone a good reason to use it. Anyone who knows puppet can pick up Ansible very quickly.
 
-### You disagree with me? Or think Salt is the best.
-Then use Ansible but prepare for snail speed deploys. Regardless, Anisible does make easier to read code. Choosing something for that reason is pretty valid.
-
-Maybe you prefer Salt but as a contractor I will run into Puppet and Ansible a lot more. I'm sure Salt is great but the market share is pretty low. Time is limited. There are other things I am learning over Salt.
+### What about Salt?
+As a contractor I will run into Puppet and Ansible a lot more. I'm sure Salt is great but the market share is pretty low. Time is limited. There are other things I am learning over Salt.
 
 # On to Mesos
 
