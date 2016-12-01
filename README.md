@@ -11,8 +11,16 @@ And puppet has https://forge.puppet.com/deric/mesos
 ### Conclusion (on going)
 Ansible is crazy easy to learn. If you have some sort of knowledge of provisioning servers I believe you can master ansible in a few days. The same can *not* be said about puppet. If I was working in a larger group I would probably choose Ansible because I know the rest of the team will be able to pick it up real fast. But.. if I was the main devops engineer of the project. I would use puppet.
 
-### Why do I prefer Puppet
-Puppet is a lot smarter on what needs to run, which makes for faster deployments. Ansible by default runs everything. It has tags or you can use multiple playbook.yml files but they don't really have the same power as Puppet has built in.  The Puppet DSL is a lot more powerful. Of course with great power comes great responsibility. It is much easier to make a mess of Puppet than Ansible. But I have faith in my ability to make things clean(possible famous last words :D)
+### When I would use Ansible
+* DevOps team is not stable. The team is new and doesn't have focus yet.
+* The DevOps team wants to use Ansible
+* Most of the people that will be touching DevOps side are developers with no Puppet knowledge at all.
+* The DevOps team is very large. Ansible creates cleaner code that is easier to maintain when in larger groups.
+
+### When I would choose Puppet
+* DevOps team is small, possibly one person.
+* DevOps team has good code sense. Puppet code becomes much cleaner when following good coding guidelines. Specifically DRY, KISS and notinventedhere. A good puppet code is cleaner than Ansible.
+* The DevOps team wants to use Puppet, but I would ask questions why they want to use it. To me, being familiar with Puppet is not alone a good reason to use it. Anyone who knows puppet can pick up Ansible very quickly.
 
 ### You disagree with me? Or think Salt is the best.
 Then use Ansible but prepare for snail speed deploys. Regardless, Anisible does make easier to read code. Choosing something for that reason is pretty valid.
