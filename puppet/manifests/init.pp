@@ -1,8 +1,8 @@
 
 node /^mesos-master.*/ {
-    include mesos_master
-    include mesos_follower
-    include mesos_dns
+    require mesos_master
+    require mesos_follower
+    require mesos_dns
 }
 
 node /^mesos-follower.*/ {

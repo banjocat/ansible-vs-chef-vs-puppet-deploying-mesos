@@ -5,5 +5,9 @@ class mesos_follower {
     file { $data_dir:
         ensure => 'directory',
     }
+    ->
+    service { 'mesos-slave':
+        ensure => running
+    }
 
 }
