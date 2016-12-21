@@ -8,6 +8,10 @@ class mesos_common {
     package {['openjdk-8-jdk', 'maven']:
         ensure  => present,
     }
+    ->
+    alternatives { 'java':
+        path => '/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java'
+    }
 
     $packages = [
       'tar',

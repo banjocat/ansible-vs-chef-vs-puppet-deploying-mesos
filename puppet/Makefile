@@ -8,6 +8,7 @@ all:
 	puppet module install ${ARGS} puppetlabs-puppet_agent --version 1.3.1
 	puppet module install ${ARGS} puppetlabs-puppet_agent --version 1.3.1
 	puppet module install ${ARGS} puppetlabs-java --version 1.6.0
+	puppet module install ${ARGS} adrien-alternatives --version 0.3.0
 	puppet module install ${UP_ARGS} puppetlabs-stdlib --version 4.13.1
 
 clean:
