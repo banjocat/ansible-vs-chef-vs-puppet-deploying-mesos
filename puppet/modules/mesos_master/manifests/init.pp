@@ -1,4 +1,5 @@
 class mesos_master {
+    require mesos_common
     package {'zookeeper':
         ensure => present
     }
