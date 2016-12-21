@@ -10,13 +10,13 @@ class mesos_master {
 
     file { '/etc/mesos-master/ip':
         ensure  => present,
-        content => "$::ipaddress",
+        content => "0.0.0.0",
         notify  => Service['mesos-master'],
     }
     ->
     file { '/etc/mesos-master/hostname':
         ensure  => present,
-        content => "$::ipaddress",
+        content => "0.0.0.0",
         notify  => Service['mesos-master'],
     }
     ->
