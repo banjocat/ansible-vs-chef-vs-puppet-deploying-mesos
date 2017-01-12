@@ -11,22 +11,12 @@ Vagrant.configure("2") do |config|
         v.cpus = 2
     end
 
-    #config.vm.provision "ansible" do |ansible|
-    #    ansible.sudo = true
-    #    ansible.playbook = "./ansible/playbook.yml"
-    #    ansible.groups = {
-    #        "mesos-master" => ["mesos-master"]
-    #    }
-    #    #ansible.tags = ['dns']
-    #end
-
-
-    config.vm.synced_folder "./puppet/hiera", "/etc/hiera" 
+    config.vm.synced_folder "./hiera", "/etc/hiera" 
     config.vm.provision "puppet" do |puppet|
-        puppet.manifests_path = "./puppet/manifests"
+        puppet.manifests_path = "./manifests"
         puppet.manifest_file = "init.pp"
-        puppet.module_path = [ "./puppet/modules", "./puppet/third_party_modules"]
-        puppet.hiera_config_path = "./puppet/hiera/vagrant_hiera.yaml"
+        puppet.module_path = [ "./modules", "./third_party_modules"]
+        puppet.hiera_config_path = "./hiera/vagrant_hiera.yaml"
         puppet.facter = {
             "fqdn" => "mesos-master"
         }
