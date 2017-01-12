@@ -1,6 +1,0 @@
-{
-  "name": "mesos",
-  "run_list": [
-    "recipe[mesos::default]"
-  ]
-}
