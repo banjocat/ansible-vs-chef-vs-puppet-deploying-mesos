@@ -9,7 +9,7 @@ For ansible https://github.com/frankhinek/ansible-mesos-cluster.git looks promis
 And puppet has https://forge.puppet.com/deric/mesos
 
 ### Conclusion (on going)
-Ansible is crazy easy to learn. If you have some sort of knowledge of provisioning servers I believe you can master ansible in a few days. The same can *not* be said about puppet. If I was working in a larger group I would probably choose Ansible because I know the rest of the team will be able to pick it up real fast. But.. if I was the main devops engineer of the project. I would use puppet.
+Which I would use really depends on the Team. I am capable in both so I would probably stick with what the rest of the team would like to work with.
 
 ### When I would use Ansible
 * DevOps team is not stable. The team is new and doesn't have focus yet.
@@ -23,6 +23,6 @@ Ansible is crazy easy to learn. If you have some sort of knowledge of provisioni
 * The DevOps team wants to use Puppet, but I would ask questions why they want to use it. To me, being familiar with Puppet is not alone a good reason to use it. Anyone who knows puppet can pick up Ansible very quickly.
 
 ### What about Salt?
-As a contractor I will run into Puppet and Ansible a lot more. I'm sure Salt is great but the market share is pretty low. Time is limited. There are other things I am learning over Salt.
+As a contractor I will run into Puppet and Ansible a lot more. I'm sure Salt is great but the market share is pretty low. Time is limited. There are other things I am learning over Salt. Actually I am more interested in learning Chef next.
 
 
