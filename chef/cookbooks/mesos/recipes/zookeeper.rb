@@ -4,6 +4,8 @@ package 'zookeeper' do
 end
 
 service 'zookeeper' do
-    action :started
+    action :start
 end
+
+
 

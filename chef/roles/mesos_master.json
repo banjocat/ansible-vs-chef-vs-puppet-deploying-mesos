@@ -2,7 +2,6 @@
   "name": "mesos_master",
   "run_list": [
     "recipe[mesos::common]",
-    "recipe[mesos::zookeeper]"
     "recipe[mesos::mesos_master]"
   ]
 }

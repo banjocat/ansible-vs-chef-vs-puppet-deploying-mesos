@@ -1,0 +1,7 @@
+{
+  "name": "zookeeper",
+  "run_list": [
+    "recipe[mesos::common]",
+    "recipe[mesos::zookeeper]"
+  ]
+}
