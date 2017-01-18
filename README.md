@@ -1,4 +1,4 @@
-# Puppet and Ansible deploying Mesos
+# Ansible, Chef and Puppet deploying Mesos
 The purpose of this repo is to compare ansible, chef and puppet. I used Mesos as a target. As it has a somewhat complicated deployment path. It also is here for me to learn Mesos better as a current client has started to use it.
 
 
