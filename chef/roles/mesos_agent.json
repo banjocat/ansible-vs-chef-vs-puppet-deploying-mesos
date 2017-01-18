@@ -1,0 +1,7 @@
+{
+  "name": "mesos_agent",
+  "run_list": [
+    "recipe[mesos::common]",
+    "recipe[mesos::agent]"
+  ]
+}

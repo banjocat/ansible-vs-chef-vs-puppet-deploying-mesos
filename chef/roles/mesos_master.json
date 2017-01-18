@@ -2,6 +2,6 @@
   "name": "mesos_master",
   "run_list": [
     "recipe[mesos::common]",
-    "recipe[mesos::mesos_master]"
+    "recipe[mesos::master]"
   ]
 }
