@@ -23,6 +23,6 @@ Which I would use really depends on the Team. I am capable in all three so I wou
 * The DevOps team wants to use Puppet, but I would ask questions why they want to use it. To me, being familiar with Puppet is not alone a good reason to use it. Anyone who knows puppet can pick up Ansible very quickly.
 
 ### What about Salt?
-As a contractor I will run into Puppet and Ansible a lot more. I'm sure Salt is great but the market share is pretty low. Time is limited. There are other things I am learning over Salt. 
+As a contractor I will run into Ansible, Chef and Puppet a lot more. I'm sure Salt is great but the market share is pretty low. Time is limited. There are other things I am learning over Salt. 
 
 
