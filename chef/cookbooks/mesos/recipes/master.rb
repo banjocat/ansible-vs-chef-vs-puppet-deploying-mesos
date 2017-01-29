@@ -13,7 +13,7 @@ file '/etc/mesos-master/hostname' do
 end
 
 file '/etc/mesos-master/ip' do
-    content node['ipaddres']
+    content "0.0.0.0"
     notifies :restart, 'service[mesos-master]'
 end
 

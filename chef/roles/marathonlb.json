@@ -1,0 +1,6 @@
+{
+  "name": "marathonlb",
+  "run_list": [
+    "recipe[mesos::marathonlb]"
+  ]
+}

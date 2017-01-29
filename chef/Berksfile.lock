@@ -1,0 +1,7 @@
+DEPENDENCIES
+  docker (~> 2.13.11)
+
+GRAPH
+  compat_resource (12.16.3)
+  docker (2.13.11)
+    compat_resource (>= 12.16.2)
