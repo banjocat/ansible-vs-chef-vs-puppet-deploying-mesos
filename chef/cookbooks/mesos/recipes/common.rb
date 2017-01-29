@@ -59,14 +59,8 @@ service 'docker' do
     action :start
 end
 
-
 file '/etc/mesos/zk' do
     zk_array = search(:node, 'roles:zookeeper').map { |n| n['ipaddress'] }
     zk_hosts = zk_array.join(':2181,')
-    content "zk://#{zk_hosts}:2181"
+    content "zk://#{zk_hosts}:2181/mesos"
 end
-
-file '/etc/mesos/ip' do
-    content node['ipaddress']
-end
-
