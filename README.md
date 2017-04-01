@@ -9,13 +9,12 @@ Which I would use really depends on the Team. I am capable in all three so I wou
 * DevOps team is not stable. The team is new and doesn't have focus yet.
 * The DevOps team wants to use Ansible
 * Most of the people that will be touching DevOps side are developers with no Puppet knowledge at all.
-* The DevOps team is very large. Ansible creates cleaner code that is easier to maintain when in larger groups.
 
 ### When I would use Chef
 * Entire team is ruby based or at least likes ruby
 * If deployment is going to be very complicated and requires a full language
 * DevOps team is small and dedicated
-
+* You feel like you won't make a mess of things(famous last words)
 
 ### When I would choose Puppet
 * DevOps team is small, possibly one person.
