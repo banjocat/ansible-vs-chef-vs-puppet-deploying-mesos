@@ -3,9 +3,10 @@ The purpose of this repo is to compare ansible, chef and puppet. I used Mesos as
 
 
 ### Conclusion (on going)
-Which I would use really depends on the Team. I am capable in all three so I would probably stick with what the rest of the team would like to work with. I like Chef because it gives a full programming language to use.. of course this can create a mess. Ansible is the easiest of all to learn but it is the slowest unless you use a lot of tags and multiple playbooks(which then increase the complexity of your code). Puppet is probably my least favorite but it has amazing 3rd party support.
+Which I would use really depends on the Team. I am capable in all three so I would probably stick with what the rest of the team would like to work with. If it was up entirely to me. I would pick Ansible. I like Chef because it gives a full programming language to use.. of course this can create a mess. Ansible is the easiest of all to learn but it is the slowest unless you use a lot of tags and multiple playbooks(which then increase the complexity of your code). Puppet is probably my least favorite but it has amazing 3rd party support.
 
 ### When I would use Ansible
+* If it was up to me to choose the tool alone.
 * DevOps team is not stable. The team is new and doesn't have focus yet.
 * The DevOps team wants to use Ansible
 * Most of the people that will be touching DevOps side are developers with no Puppet knowledge at all.
